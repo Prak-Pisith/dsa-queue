@@ -17,6 +17,11 @@ class Queue<T> {
     return this.items.shift();
   }
 
+  // 
+  peek(): T | undefined {
+    return this.items[0];
+  }
+
   isEmpty(): boolean {
     return this.items.length === 0;
   }
@@ -33,6 +38,8 @@ const animalQueue = new Queue<string>();
 animalQueue.enqueue('Lion');
 animalQueue.enqueue('Tiger');
 animalQueue.enqueue('Cat');
+
+console.log(animalQueue.peek());
 
 animalQueue.display();
 

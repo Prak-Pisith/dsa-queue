@@ -14,6 +14,10 @@ var Queue = /** @class */ (function () {
     Queue.prototype.dequeue = function () {
         return this.items.shift();
     };
+    // 
+    Queue.prototype.peek = function () {
+        return this.items[0];
+    };
     Queue.prototype.isEmpty = function () {
         return this.items.length === 0;
     };
@@ -29,6 +33,7 @@ var animalQueue = new Queue();
 animalQueue.enqueue('Lion');
 animalQueue.enqueue('Tiger');
 animalQueue.enqueue('Cat');
+console.log(animalQueue.peek());
 animalQueue.display();
 console.log("Dequeue : ".concat(animalQueue.dequeue()));
 console.log("Dequeue : ".concat(animalQueue.dequeue()));
